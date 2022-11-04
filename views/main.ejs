@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Music Player</title>
+  <link rel="Shortcut Icon" type="image/jpg" href="/public/Images/music-1.jpg">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/public/style/style.css">
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-expand-lg bg-dark text-white">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#"><span class="text-danger">Music</span> Player</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-white active" aria-current="page" href="/main">Home</a>
+          </li>
+
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <form class="d-flex" action="/logout" method="post">
+          <button class="btn btn-outline-danger m-2">logout</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="mt-2">
+    <div class="row ">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 bg-light text-center d-flex align-items-center justify-content-center ">
+        <div class="card mt-3" style="width: 18rem;">
+          <h5 class="card-title  mt-2" id="title">COCKTAIL</h5>
+            <p class="card-text" id="artist">Kavita Seth, Neeraj Shreedhar</p>
+
+          <img src="/public/Images/music-1.jpg" class="bg-dark img-fluid rounded-circle  m-2 " alt="...">
+          <div class="card-body">
+            
+
+            <audio src="/public/Music/music-1.mp3"></audio>
+
+            <div id="progress_container" class="progressbar_container">
+              <div class="progress_duration_meter">
+                <div id="current_time">0:00</div>
+                <div id="duration">4:42</div>
+              </div>
+              <div class="progress_div" id="progress_div">
+                <div class="progress bg-black "  id="progress" style="width:0% ;"></div>
+              </div>
+            </div>
+
+            <div class="music_controls">
+              <i class="fa-sharp fa-solid fa-backward icon" id="prev" title="previous"></i>
+              <i class="fa-solid fa-play icon main_button" id="play" title="play"></i>
+              <i class="fa-sharp fa-solid fa-forward icon" id="next" title="next"></i>
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+
+    <script src="/public/js/app.js"></script>
+</body>
+
+</html>

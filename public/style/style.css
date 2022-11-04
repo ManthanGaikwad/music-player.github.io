@@ -1,0 +1,38 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .music_controls{
+        width: 100px;
+        display: flex;
+
+        justify-content: space-between;
+        margin: auto;
+        margin-top: 30px;
+    }
+    .music_controls .icon{
+        color: #111111;
+        font-size: 20px;
+        cursor: pointer;
+        filter: drop-shadow(0 1.2rem 3rem 0.5rem rgba(0,0,0,0.4));
+
+    }
+    .progress_duration_meter{
+      display: flex;
+      justify-content: space-between;
+    }
+    .progress_div{
+      cursor: pointer;
+      border: 1px solid black;
+      border-radius: 5PX;
+    }
+    .animation{
+        animation: rotatePlayer 3s linear  infinite;
+    }
+    @keyframes rotatePlayer {
+        from{ transform: rotate(0deg);}
+        to{
+            transform: rotate(360deg);
+        }
+    }
+   
+
